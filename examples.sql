@@ -34,6 +34,8 @@ FROM (SELECT
         employees e
     JOIN offices o ON e.office_id = o.office_id) empl where city='New York City';
     
+-- answer to stratascratch question
+
 SELECT 
     CASE
         WHEN n_seniors > n_ny_based THEN 'More seniors'
@@ -60,7 +62,8 @@ FROM (SELECT
         employees e
     JOIN offices o ON e.office_id = o.office_id) empl where city='New York City') us_based ON TRUE;
     
-    
+-- answer to stratascratch question
+
     with empl as (SELECT 
         e.employee_id, e.first_name, e.last_name, e.salary, o.city
     FROM
@@ -85,7 +88,8 @@ FROM
         empl
     WHERE
         city = 'New York City') us_based ON TRUE;
-        
+
+-- Select number of seniors and ny_based employees
         SELECT 
     *
 FROM
